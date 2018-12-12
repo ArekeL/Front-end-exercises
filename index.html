@@ -8,14 +8,17 @@
   <title>Document</title>
   <style>
     html {
-      --divNumber: 4;
+      --divNumber: 8;
       --divHeight: calc(100vh/var(--divNumber));
       --oddBcg: blue;
       --evenBgc: red;
+      --height1: 50px;
+      --height2: 50px;
     }
 
     div {
-      height: var(--divHeight);
+      /* height: var(--divHeight); */
+      height: calc(var(--height1) + var(--height2));
       background-color: var(--oddBcg);
     }
 
@@ -26,6 +29,10 @@
 </head>
 
 <body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
