@@ -17,7 +17,30 @@ Tekst ma być pod szachownicą. Właściwość position h1 musi być static.
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Szachownica Float</title>
     <style>
+        /* Solution #3 for border the best*/
+        .clearcix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
         .board {
+            width: 30vw;
+            border: 10px solid black;
+            margin: 30Spx auto;
+            /* Solution #1 for border
+            overflow: hidden; (auto)*/
+            /* * Solution #2 height: 30vw; */
+        }
+
+        span {
+            float: left;
+            width: 50%;
+            height: 15vw;
+        }
+
+        /* Solution #4 */
+        /* .board {
             width: 30vw;
             padding-bottom: 30vw;
             border: 10px solid black;
@@ -29,7 +52,7 @@ Tekst ma być pod szachownicą. Właściwość position h1 musi być static.
         span {
             padding: 25%;
             float: left;
-        }
+        } */
 
         .board :nth-child(1) {
             background-color: crimson;
@@ -57,7 +80,7 @@ Tekst ma być pod szachownicą. Właściwość position h1 musi być static.
 </head>
 
 <body>
-    <div class="board">
+    <div class="board clearcix">
         <span></span>
         <span></span>
         <span></span>
