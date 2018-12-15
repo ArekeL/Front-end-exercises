@@ -30,19 +30,46 @@ Tekst ma być pod szachownicą.
             height: 30vw;
             border: 10px solid black;
             position: relative;
-            top: calc(50vh - 15vw - 5px);
-            left: calc(50vw - 15vw - 5px);
+            top: calc(50vh - 15vw - 10px);
+            left: calc(50vw - 15vw - 10px);
+            font-size: 0;
         }
+
+        /* my solution for h1 */
 
         h1 {
             position: relative;
             display: inline-block;
             top: calc(50vh - 15vw);
-            left: calc(50vw + 5px - 380px / 2);
+            left: calc(50vw - 380px / 2);
 
         }
 
+        /* h1 {
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            left: 0;
+            bottom: 10%;
+            width: 100%;
+            text-align: center;
+        } */
+
         span {
+            width: 50%;
+            height: 50%;
+            display: inline-block;
+        }
+
+        .board :first-child {
+            background-color: crimson;
+        }
+
+        .board :last-child {
+            background-color: crimson;
+        }
+
+        /* span {
             display: inline-block;
             width: 15vw;
             height: 15vw;
@@ -53,22 +80,25 @@ Tekst ma być pod szachownicą.
         }
 
         .board :nth-child(2) {
-            background-color: thistle;
+            background-color: white;
         }
 
         .board :nth-child(3) {
-            background-color: thistle;
+            background-color: white;
         }
 
         .board :nth-child(4) {
             background-color: crimson;
-        }
+        } */
     </style>
 </head>
 
 <body>
     <div class="board">
-        <span></span><span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
     <h1>Szachownica "inline-block"</h1>
 </body>
