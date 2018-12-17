@@ -16,7 +16,56 @@ Tekst ma być pod szachownicą. Wykorzystaj do tego właściwości position rela
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Szachownica Position Absolute</title>
-    <style></style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .board {
+            border: 10px solid black;
+            width: 50%;
+            height: 50vw;
+            position: absolute;
+            top: calc(50vw - 25vw - 10px);
+            left: calc(50vh - 25vw - 10px);
+        }
+
+        span {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+        }
+
+        .board :nth-child(1) {
+            top: 0;
+            left: 0;
+            background-color: crimson;
+        }
+
+        .board :nth-child(2) {
+            top: 0;
+            right: 0;
+        }
+
+        .board :nth-child(3) {
+            bottom: 0;
+            left: 0;
+        }
+
+        .board :nth-child(4) {
+            bottom: 0;
+            right: 0;
+            background-color: crimson;
+        }
+
+        h1 {
+            position: relative;
+            top: calc(50vw + 25vw + 20px + 50px - 17px);
+            left: calc(50vw - 475px / 2 - 15px);
+
+        }
+    </style>
 </head>
 
 <body>
