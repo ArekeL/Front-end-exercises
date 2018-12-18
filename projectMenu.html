@@ -5,26 +5,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+    crossorigin="anonymous">
   <title>Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      /* overflow: hidden; */
+    }
+
+    .wrap,
+    nav,
+    header {
+      height: 360px;
+    }
+
+    nav {
+      float: left;
+      width: 300px;
+      background-color: aqua;
+    }
+
+    header {
+      float: left;
+      width: calc(100% - 300px);
+      background-image: url(img/pianino.jpg);
+      background-size: cover;
+      background-position: center center;
+
+    }
+
+    section {
+      margin-top: 50px;
+    }
+
+    section h1 {
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 15px 0;
+      background-color: darkslategray;
+      color: azure;
+      text-align: center;
+    }
+  </style>
+
 </head>
 
 <body>
-  <div class="erap">
+  <div class="wrap">
     <nav>
       <ul>
-        <li><a href="#">start</a></li>
-        <li><a href="#">oferta</a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">terminarz</a></li>
-        <li><a href="#">kontakt</a></li>
+        <li><a href="#"><i class="far fa-play-circle"></i>start</a></li>
+        <li><a href="#"><i class="fas fa-shopping-cart"></i>oferta</a></li>
+        <li><a href="#"><i class="fas fa-rss"></i>blog</a></li>
+        <li><a href="#"><i class="fas fa-calendar-alt"></i>terminarz</a></li>
+        <li><a href="#"><i class="far fa-envelope"></i>kontakt</a></li>
       </ul>
     </nav>
-
+    <header></header>
 
   </div>
   <section>
-
-
+    <h1>Hello World</h1>
   </section>
 </body>
 
