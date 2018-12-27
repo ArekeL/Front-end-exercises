@@ -22,7 +22,73 @@
             background-color: cadetblue;
         }
 
+        .circle {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: white 2px solid;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+        }
 
+        div.red {
+            top: 20px;
+            left: 20px;
+            background-color: red;
+        }
+
+        div.green {
+            top: 20px;
+            right: 20px;
+            background-color: darkgreen;
+        }
+
+        div.blue {
+            bottom: 20px;
+            left: 20px;
+            background-color: blue;
+        }
+
+        div.orange {
+            bottom: 20px;
+            right: 20px;
+            background-color: orange;
+        }
+
+        .bg p {
+            position: absolute;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color: azure;
+            top: 0;
+            left: 0;
+            line-height: 100vh;
+            width: 100vw;
+            text-align: center;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        div.red:hover~.bg .red {
+            background-color: red;
+            opacity: 1;
+        }
+
+        div.green:hover~.bg .green {
+            background-color: darkgreen;
+            opacity: 1;
+        }
+
+        div.blue:hover~.bg .blue {
+            background-color: blue;
+            opacity: 1;
+        }
+
+        div.orange:hover~.bg .orange {
+            background-color: orange;
+            opacity: 1;
+        }
 
 
         /* one of solution */
