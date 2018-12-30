@@ -26,14 +26,12 @@
             cursor: pointer;
         }
 
-        .house,
-        .roof,
-        .winl,
-        .winr,
-        .door {
+        div {
             font-size: 0;
-            top: 100vh;
-            left: 0;
+            top: 90vh;
+            left: 5vw;
+            width: 5px;
+            height: 5px;
         }
 
         span:hover {
@@ -70,10 +68,10 @@
             height: 80px;
             background-color: yellow;
             position: absolute;
-            top: 35%;
-            left: 30%;
+            top: 50%;
+            left: 50%;
             z-index: 2;
-            transform: rotate(180deg);
+            transform: translate(-160px, -80px) rotate(180deg);
             transition: 1s .1s;
         }
 
@@ -82,10 +80,10 @@
             height: 80px;
             background-color: yellow;
             position: absolute;
-            top: 35%;
-            left: 60%;
+            top: 50%;
+            left: 50%;
             z-index: 2;
-            transform: rotate(180deg);
+            transform: translate(80px, -80px) rotate(180deg);
             transition: 1s .2s;
         }
 
