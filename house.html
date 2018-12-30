@@ -27,11 +27,34 @@
         }
 
         div {
+            position: absolute;
             font-size: 0;
             top: 90vh;
             left: 5vw;
-            width: 5px;
-            height: 5px;
+            width: 0px;
+            height: 0px;
+            transition: 1s;
+            background-color: darkred;
+        }
+
+        div:nth-of-type(2) {
+            transition-delay: .2s;
+        }
+
+        div:nth-of-type(3) {
+            transition-delay: .4s;
+        }
+
+        div:nth-of-type(4) {
+            transition-delay: .5s;
+        }
+
+        div:nth-of-type(4) {
+            transition-delay: .6s;
+        }
+
+        div:nth-of-type(6) {
+            transition-delay: .8s;
         }
 
         span:hover {
@@ -39,7 +62,72 @@
             color: darkred;
         }
 
-        span:hover~.house {
+        /* span:hover~div:nth-child(2)*/
+        span:hover~div:nth-of-type(1) {
+            top: 50%;
+            left: 50%;
+            width: 50vh;
+            height: 30vh;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        span:hover~div:nth-of-type(2) {
+            top: calc(50% - 15vh);
+            left: 50%;
+            width: calc(50vh/1.41);
+            height: calc(50vh/1.41);
+            background-color: black;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        span:hover~div:nth-of-type(3) {
+            top: 50%;
+            top: 50%;
+            left: 50%;
+            width: 10vh;
+            height: 10vh;
+            background-color: yellow;
+            transform: translate(-190%, -100%) rotate(180deg);
+            z-index: 1;
+        }
+
+        span:hover~div:nth-of-type(4) {
+            top: 50%;
+            top: 50%;
+            left: 50%;
+            width: 10vh;
+            height: 10vh;
+            background-color: yellow;
+            transform: translate(90%, -100%) rotate(180deg);
+            z-index: 1;
+        }
+
+        span:hover~div:nth-of-type(5) {
+            top: 50%;
+            top: 50%;
+            left: 50%;
+            width: 10vh;
+            height: 15vh;
+            background-color: gray;
+            transform: translate(-50%, 0);
+            z-index: 1;
+        }
+
+        span:hover~div:nth-of-type(6) {
+            top: 50%;
+            top: 50%;
+            left: 50%;
+            width: 5vh;
+            height: 15vh;
+            background-color: rgb(43, 37, 37);
+            transform: translate(200%, -250%);
+            z-index: -1;
+
+        }
+
+
+        /* span:hover~.house {
             width: 425px;
             height: 300px;
             background-color: darkred;
@@ -97,7 +185,7 @@
             transform: translate(-35px, 30px);
             z-index: 2;
             transition: 1s .3s;
-        }
+        } */
     </style>
 
 </head>
