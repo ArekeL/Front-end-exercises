@@ -19,20 +19,22 @@
     }
 
     .hand {
-      margin-top: 3px;
+
       width: 6px;
-      height: calc(50% - 3px);
+      height: 45%;
+      margin-top: 5%;
       background-color: black;
       border-radius: 50% 15% 50% 15%;
       position: absolute;
-      left: calc(50% - 3px);
-      transform: rotate(0deg);
+      left: 50%;
+      transform: rotate(0deg) translateX(-50%);
       transform-origin: 50% 100%;
+      transition: 60s steps(60);
     }
 
     .clock:hover .hand {
-      transform: rotate(360deg);
-      transition: 60s linear;
+      transform: rotate(360deg) translateX(-50%);
+
     }
   </style>
 </head>
