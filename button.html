@@ -21,11 +21,22 @@
       overflow: hidden;
     }
 
-    .but1:hover span {
+    .but1:hover::after {
       left: 5%;
     }
 
-    span {
+    .but1::after {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 3px;
+      bottom: 0;
+      left: -100%;
+      background-color: black;
+      transition: .4s cubic-bezier(0.9, 1.98, 1, 0.93);
+    }
+
+    /* span {
       position: absolute;
       width: 90%;
       height: 3px;
@@ -33,12 +44,12 @@
       bottom: 0;
       left: -100%;
       transition: .4s;
-    }
+    } */
   </style>
 </head>
 
 <body>
-  <button class="but1">Przycisk<span></span></button>
+  <button class="but1">Przycisk</button>
   <!-- <button class="but2"></button>
   <button class="but3"></button>
   <button class="but4"></button> -->
