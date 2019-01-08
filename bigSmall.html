@@ -7,33 +7,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        :root {
+            --textSize: 80px;
+        }
+
         button {
             font-size: 40px;
         }
 
         h1 {
+            margin: 0;
             font-family: arial;
-            font-size: 80px;
+            font-size: var(--textSize);
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             transition: .5s;
+            border: 0px solid black;
 
         }
 
-        .larger:hover~h1 {
-            font-size: 160px;
+        h1.big {
+            font-size: calc(var(--textSize) * 2);
+        }
+
+        h1.small {
+            font-size: calc(var(--textSize) / 2);
+        }
+
+        h1.bord {
+            border: 7px solid black;
+            padding: 10px;
+        }
+
+        /* .larger:hover~h1 {
+            font-size: calc(var(--textSize) * 2);
         }
 
         .smaller:hover~h1 {
-            font-size: 40px;
+            font-size: calc(var(--textSize) / 2);
         }
 
         .border:hover~h1 {
             border: 7px solid black;
             padding: 10px;
-        }
+        } */
     </style>
 </head>
 
@@ -43,7 +62,24 @@
     <button class="larger">2xWiększy</button>
     <button class="smaller">2xMniejszy</button>
     <button class="border">Obramowanie</button>
-    <h1 class="n">Nazwa</h1>
+    <h1>Nazwa</h1>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script>
+        $('.larger').click(function () {
+            $('h1').toggleClass('big');
+        })
+
+        $('.smaller').click(function () {
+            $('h1').toggleClass('small');
+        })
+
+        $('.border').click(function () {
+            $('h1').toggleClass('bord');
+        })
+    </script>
 
 
 </body>
