@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sunset</title>
+</head>
+<style>
+  body {
+    background-color: rgb(94, 84, 84);
+    animation: sky 5s linear;
+  }
+
+  .sun {
+    position: fixed;
+    bottom: 15%;
+    left: 10%;
+    width: 15vw;
+    height: 15vw;
+    background-color: rgb(253, 86, 19);
+    border-radius: 50%;
+  }
+
+  .grass {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30vw;
+    background-color: seagreen;
+  }
+
+  @keyframes sky {
+    0% {
+      background-color: rgb(94, 84, 84);
+    }
+
+    20% {
+      background-color: rgb(236, 33, 77);
+    }
+
+    50% {
+      background-color: lightskyblue;
+    }
+
+    80% {
+      background-color: rgb(236, 33, 77);
+    }
+
+    100% {
+      background-color: rgb(94, 84, 84);
+    }
+  }
+</style>
+
+<body>
+  <div class="sun"></div>
+  <div class="grass"></div>
+</body>
+
+</html>
