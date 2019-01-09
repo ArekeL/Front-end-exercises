@@ -10,17 +10,18 @@
 <style>
   body {
     background-color: rgb(94, 84, 84);
-    animation: sky 5s linear;
+    animation: sky 5s linear infinite;
   }
 
   .sun {
     position: fixed;
     bottom: 15%;
     left: 10%;
-    width: 15vw;
-    height: 15vw;
+    width: 15vh;
+    height: 15vh;
     background-color: rgb(253, 86, 19);
     border-radius: 50%;
+    animation: sun 5s linear infinite
   }
 
   .grass {
@@ -28,8 +29,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 30vw;
-    background-color: seagreen;
+    height: 30vh;
+    background-color: rgb(7, 54, 28);
+    animation: grass 5s linear infinite;
   }
 
   @keyframes sky {
@@ -51,6 +53,74 @@
 
     100% {
       background-color: rgb(94, 84, 84);
+    }
+  }
+
+  @keyframes grass {
+    0% {
+      background-color: rgb(7, 54, 28);
+    }
+
+    20% {
+      background-color: rgb(27, 94, 27);
+    }
+
+    50% {
+      background-color: rgb(7, 165, 7);
+    }
+
+    70% {
+      background-color: rgb(27, 94, 27);
+    }
+
+    100% {
+      background-color: rgb(7, 54, 28);
+    }
+  }
+
+  @keyframes sun {
+
+    0% {
+      bottom: 15%;
+      left: 10%;
+    }
+
+    20% {
+      bottom: 30%;
+    }
+
+    50% {
+      bottom: 55%;
+      left: 45%;
+    }
+
+    70% {
+      bottom: 30%;
+    }
+
+    100% {
+      bottom: 15%;
+      left: 80%;
+    }
+
+    0% {
+      background-color: rgb(253, 86, 19)
+    }
+
+    20% {
+      background-color: rgb(221, 144, 27)
+    }
+
+    50% {
+      background-color: yellow;
+    }
+
+    70% {
+      background-color: rgb(221, 144, 27)
+    }
+
+    100% {
+      background-color: rgb(253, 86, 19)
     }
   }
 </style>
